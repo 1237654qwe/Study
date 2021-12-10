@@ -1,0 +1,25 @@
+<!doctype html>
+
+<script>
+
+	const arr = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]]
+
+	const likeFlat = (arr) => {
+		return arr.reduce((acc, item) => {
+			if (Array.isArray(item)) {
+				return [...acc, ...likeFlat(item)]
+			} else {
+				return [...acc, item]
+			}
+		}, [])
+	}
+
+	console.log(likeFlat(arr))
+
+</script>
+
+</html>
+
+<!-- 2. Написать приложение, получающее массив с вложенными массивами и возвращающее его “плоскую” версию. 
+Встроенный метод массивов flat использовать нельзя.
+Например: [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]] => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] -->
