@@ -70,3 +70,20 @@ const transform = (arr) => {
 }
 
 console.log(transform(arr3))
+
+
+congrat.onclick = () => {
+	alert('Уря!')
+}
+
+input.addEventListener("focusout", function () {
+	alert('ждем возвращения');
+});
+
+buttonForm.onclick = () => {
+	if (!inputForm.value) {
+		return buttonForm.innerHTML = "Опубликовать"
+	}
+	buttonForm.innerHTML = inputForm.value
+	inputForm.value = ''
+}
